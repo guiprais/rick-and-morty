@@ -4,13 +4,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding: 0.8rem;
+  align-items: center;
+  padding: 1rem;
+
+  box-shadow: 0px 0px 1px;
+
+  width: 250px;
 
   img {
-    width: 200px;
-  }
-
-  p {
-    width: 200px;
+    max-width: 150px;
   }
 `;
