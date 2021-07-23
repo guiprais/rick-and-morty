@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Title = styled.h1`
-  font-size: 32px;
-  color: #8257e6;
+export const Container = styled.div`
+  max-width: 903px;
+  margin: 0 auto;
+`;
+
+export const CardContainer = styled.div`
+  display: inline-block;
 `;
