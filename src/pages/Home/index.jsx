@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Card } from '../../components/Card';
-import { Container, CardContainer, Content } from './style';
+import { Container, Content } from './style';
 import { api } from '../../services/api';
+import { Header } from '../../components/Header';
 
 export const Home = () => {
   const [characters, setCharacters] = useState([]);
@@ -14,12 +16,13 @@ export const Home = () => {
 
   return (
     <Container>
+      <Header />
       <Content>
         {characters &&
           characters.map(character => (
-            <CardContainer>
-              <Card key={character.id} character={character} />
-            </CardContainer>
+            <Link to={`/${character.id}`} key={character.id}>
+              <Card character={character} />
+            </Link>
           ))}
       </Content>
     </Container>

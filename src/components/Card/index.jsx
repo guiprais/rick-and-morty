@@ -8,6 +8,7 @@ export const Card = ({ character }) => {
       <img src={character.image} alt={character.name} />
       <p>{character.name}</p>
       <p>{character.species}</p>
+      <p>{character.location.name}</p>
     </Container>
   );
 };
