@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from './style';
+import { Container, Text } from './style';
 
 export const Card = ({ character }) => {
   return (
     <Container>
       <img src={character.image} alt={character.name} />
-      <p>{character.name}</p>
-      <p>{character.species}</p>
-      <p>{character.location.name}</p>
+      <Text>{character.name}</Text>
+      <Text>{character.species}</Text>
+      <Text>{character.location.name}</Text>
     </Container>
   );
 };
