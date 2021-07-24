@@ -32,3 +32,5 @@ export const Container = styled.div`
     transform: scale(1);
   }
 `;
+
+export const Text = styled.div``;

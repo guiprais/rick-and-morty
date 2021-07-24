@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Text } from './style';
 import { api } from '../../services/api';
 
 export const CardPage = () => {
@@ -13,12 +14,12 @@ export const CardPage = () => {
 
   return (
     <>
-      <p>{character.name}</p>
-      <p>{character.status}</p>
-      <p>{character.species}</p>
-      <p>{character.gender}</p>
+      <Text>{character.name}</Text>
+      <Text>{character.status}</Text>
+      <Text>{character.species}</Text>
+      <Text>{character.gender}</Text>
       <img src={character.image} alt={character.name} />
-      <p>{}</p>
+      <Text>{}</Text>
     </>
   );
 };

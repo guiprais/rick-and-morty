@@ -2,16 +2,20 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card } from '../../components/Card';
 import { Container, Content } from './style';
-import { api } from '../../services/api';
+import { getCharacters } from '../../services/characters';
 import { Header } from '../../components/Header';
 
 export const Home = () => {
   const [characters, setCharacters] = useState([]);
 
+  const getAllCharacters = () => {
+    getCharacters()
+      .then(data => setCharacters(data))
+      .catch(() => {});
+  };
+
   useEffect(() => {
-    api
-      .get('/character')
-      .then(response => setCharacters(response.data.results));
+    getAllCharacters();
   }, []);
 
   return (
