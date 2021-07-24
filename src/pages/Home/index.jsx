@@ -10,9 +10,7 @@ export const Home = () => {
 
   const getAllCharacters = () => {
     getCharacters()
-      .then(data => {
-        setCharacters(data);
-      })
+      .then(data => setCharacters(data))
       .catch(() => {});
   };
 
