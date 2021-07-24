@@ -33,4 +33,4 @@ export const Container = styled.div`
   }
 `;
 
-export const Text = styled.div``;
+export const Text = styled.p``;
