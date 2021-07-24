@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Text } from './style';
+import { Container, Text, TextContent, Bold } from './style';
 import { api } from '../../services/api';
 
 export const CardPage = () => {
@@ -13,13 +13,24 @@ export const CardPage = () => {
   }, []);
 
   return (
-    <>
-      <Text>{character.name}</Text>
-      <Text>{character.status}</Text>
-      <Text>{character.species}</Text>
-      <Text>{character.gender}</Text>
-      <img src={character.image} alt={character.name} />
-      <Text>{}</Text>
-    </>
+    <Container>
+      <div>
+        <img src={character.image} alt={character.name} />
+        <TextContent>
+          <Text>
+            <Bold>Name:</Bold> {character.name}
+          </Text>
+          <Text>
+            <Bold>Status:</Bold> {character.status}
+          </Text>
+          <Text>
+            <Bold>Species:</Bold> {character.species}
+          </Text>
+          <Text>
+            <Bold>Gender:</Bold> {character.gender}
+          </Text>
+        </TextContent>
+      </div>
+    </Container>
   );
 };
