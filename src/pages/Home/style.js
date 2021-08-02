@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  max-width: 1080px;
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
 
@@ -9,7 +12,6 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  max-width: 1080px;
   display: flex;
 
   flex-wrap: wrap;
