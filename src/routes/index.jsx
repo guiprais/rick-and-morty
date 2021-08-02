@@ -5,8 +5,8 @@ import { Home } from '../pages/Home';
 export const Routes = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/:id" component={CardPage} />
+      <Route exact path="/rick-and-morty/" component={Home} />
+      <Route exact path="/rick-and-morty/:id" component={CardPage} />
     </Switch>
   );
 };
