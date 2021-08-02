@@ -41,7 +41,7 @@ export const Home = () => {
       <Content>
         {characters &&
           characters.map(character => (
-            <Link to={`/${character.id}`} key={character.id}>
+            <Link to={`/rick-and-morty/${character.id}`} key={character.id}>
               <Card character={character} />
             </Link>
           ))}
